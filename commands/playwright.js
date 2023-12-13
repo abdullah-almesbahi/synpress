@@ -187,11 +187,11 @@ module.exports = {
         return page;
       }
     }
-    await sleep(200);
-    if (retries < 50) {
+    await sleep(20000);
+    if (retries < 200) {
       retries++;
       return await module.exports.switchToMetamaskNotification();
-    } else if (retries >= 50) {
+    } else if (retries >= 200) {
       retries = 0;
       throw new Error(
         '[switchToMetamaskNotification] Max amount of retries to switch to metamask notification window has been reached. It was never found.',
