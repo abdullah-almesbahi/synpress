@@ -187,7 +187,7 @@ module.exports = {
         return page;
       }
     }
-    await sleep(20000);
+    await sleep(2000);
     if (retries < 200) {
       retries++;
       return await module.exports.switchToMetamaskNotification();
